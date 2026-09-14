@@ -9,7 +9,8 @@ Tech Stack: Node >=20, pptxgenjs 4.0.1, Google Drive REST, workspace-mcp OAuth �
 - [x] Сборка: schema/renderer для title, bullets, case, table, steps; source requirement, source identity, case evidence boundaries. Проверка: malformed input/unknown case/oversized text rejected; synthetic sample editable PPTX.
 - [x] Cloud: portable auth, live identity, exact folder, stable identity, ambiguous match rejection, optimistic modifiedTime protection, cloud export prior to update. Проверка: unit scenarios + live create/export/update same ID с синтетикой, refusal stale revision.
 - [x] Skill: preflight, фактологический ledger, claim rules, cloud manual-edit preservation, full visual QA and honest states. Проверка: pressure scenario unavailable proof/conflicting offer/no render.
-- [x] Delivery: installer, reproducible ZIP, CI, user guide; separate reviewer; publish private repo/release and verify remote content. Доступ продавцам только после подтверждения GitHub identities.
+- [x] Delivery package: installer, reproducible ZIP, CI workflows, user guide; separate reviewer.
+- [ ] Publish: push private repo, publish release, verify remote content and CI. Автоматическая проверка разрешений остановила push; ожидается подтверждение точного состава и репозитория. Доступ продавцам — после получения GitHub identities.
 
 User authorization: 2026-09-14 — самостоятельно доукомплектовать, автоматизировать и выложить на GitHub; получить только необходимую авторизацию. Исходный meeting-deck-bot checkout не менять.
 
