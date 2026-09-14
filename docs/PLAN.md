@@ -10,8 +10,8 @@ Tech Stack: Node >=20, pptxgenjs 4.0.1, Google Drive REST, workspace-mcp OAuth �
 - [x] Cloud: portable auth, live identity, exact folder, stable identity, ambiguous match rejection, optimistic modifiedTime protection, cloud export prior to update. Проверка: unit scenarios + live create/export/update same ID с синтетикой, refusal stale revision.
 - [x] Skill: preflight, фактологический ledger, claim rules, cloud manual-edit preservation, full visual QA and honest states. Проверка: pressure scenario unavailable proof/conflicting offer/no render.
 - [x] Delivery package: installer, reproducible ZIP, CI workflows, user guide; separate reviewer.
-- [ ] Publish: push private repo, publish release, verify remote content and CI. Автоматическая проверка разрешений остановила push; ожидается подтверждение точного состава и репозитория. Доступ продавцам — после получения GitHub identities.
+- [x] Publish: пользователь явно разрешил указанный состав пакета; main опубликован в закрытом dep62-byte/itogi-vstrechi. Выпуск ZIP запускается тегом v2.0.0; результаты проверки выпуска доступны в GitHub Actions. Доступ продавцам — после получения GitHub identities.
 
 User authorization: 2026-09-14 — самостоятельно доукомплектовать, автоматизировать и выложить на GitHub; получить только необходимую авторизацию. Исходный meeting-deck-bot checkout не менять.
 
-Выпуск подготовлен; доступы продавцам зависят от предоставления их GitHub-логинов. Результаты — ACCEPTANCE.md.
+Пакет опубликован в GitHub; доступы продавцам зависят от предоставления их GitHub-логинов. Результаты — ACCEPTANCE.md.
