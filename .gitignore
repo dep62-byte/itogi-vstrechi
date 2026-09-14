@@ -1,0 +1,8 @@
+node_modules/
+work/
+scratchpad/
+dist/
+.env*
+*.credentials.json
+*.token*
+.DS_Store

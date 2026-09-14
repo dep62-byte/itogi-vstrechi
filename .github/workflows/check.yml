@@ -1,0 +1,16 @@
+name: Check seller skill
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm --prefix skill/itogi-vstrechi ci --ignore-scripts --no-audit --no-fund
+      - run: npm --prefix skill/itogi-vstrechi test
+      - run: node skill/itogi-vstrechi/scripts/doctor.mjs
+      - run: python3 scripts/package.py

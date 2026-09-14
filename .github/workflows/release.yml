@@ -1,0 +1,20 @@
+name: Publish release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm --prefix skill/itogi-vstrechi ci --ignore-scripts --no-audit --no-fund
+      - run: npm --prefix skill/itogi-vstrechi test
+      - run: python3 scripts/package.py
+      - run: gh release create "$GITHUB_REF_NAME" dist/*.zip dist/SHA256SUMS --title "Итоги встречи $GITHUB_REF_NAME" --notes-file docs/RELEASE.md
+        env:
+          GH_TOKEN: ${{ github.token }}
